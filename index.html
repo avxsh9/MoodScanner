@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Mood Predictor Comedy</title>
+    <link rel="stylesheet" href="style.css">
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+    <div id="app">
+      <div class="stars"></div>
+      <div class="container">
+        <h1 class="title">💃 MOOD PREDICTOR 🔥</h1>
+        <p class="subtitle">Advanced AI-Powered  Mood Analysis System</p>
+
+        <div id="mainScreen" class="main-screen">
+          <div class="input-container">
+            <input type="text" id="moodInput" placeholder="What is your name (optional)" class="mood-input">
+            <button id="predictBtn" class="predict-btn">🔮 PREDICT MOOD NOW</button>
+          </div>
+        </div>
+
+        <div id="loadingScreen" class="loading-screen hidden">
+            <div class="terminal" aria-live="polite">
+                <div id="terminalText" class="terminal-text"></div>
+              </div>
+              
+          <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div id="resultScreen" class="result-screen hidden">
+          <div class="result-card">
+            <h2 class="result-title">💖 FINAL MOOD DETECTED</h2>
+            <div id="moodResult" class="mood-result"></div>
+            <div id="moodDescription" class="mood-description"></div>
+            <div class="stats-grid" id="statsGrid"></div>
+            <button id="predictAgain" class="predict-again-btn">🔄 PREDICT AGAIN</button>
+          </div>
+        </div>
+      </div>
+      <canvas id="confettiCanvas"></canvas>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
